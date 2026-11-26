@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "generatedFrom": "Z:\\repo\\workspace.json",
-  "generatedAt": "2026-11-26T22:45:30Z",
+  "generatedAt": "2026-11-26T22:25:00Z",
   "repositories": [
     {
       "name": "mw-echo",
@@ -146,6 +146,51 @@
       "port": null,
       "profile": "mobile",
       "pillar": "Android-First Mobile Companion"
+    },
+    {
+      "name": "mw-rocksoul-cli",
+      "github": "A-L-L-A-H/mw-rocksoul-cli",
+      "defaultBranch": "main",
+      "stack": "Go",
+      "port": null,
+      "profile": "rocksoul",
+      "pillar": "Rocksoul AI"
+    },
+    {
+      "name": "mw-rocksoul-gateway",
+      "github": "A-L-L-A-H/mw-rocksoul-gateway",
+      "defaultBranch": "main",
+      "stack": "Go",
+      "port": 4510,
+      "profile": "rocksoul",
+      "pillar": "Rocksoul AI"
+    },
+    {
+      "name": "mw-rocksoul-core",
+      "github": "A-L-L-A-H/mw-rocksoul-core",
+      "defaultBranch": "main",
+      "stack": "TypeScript/Bun",
+      "port": 4520,
+      "profile": "rocksoul",
+      "pillar": "Rocksoul AI"
+    },
+    {
+      "name": "mw-rocksoul-mcp",
+      "github": "A-L-L-A-H/mw-rocksoul-mcp",
+      "defaultBranch": "main",
+      "stack": "TypeScript/Bun",
+      "port": 4530,
+      "profile": "rocksoul",
+      "pillar": "Rocksoul AI"
+    },
+    {
+      "name": "mw-rocksoul-sandbox",
+      "github": "A-L-L-A-H/mw-rocksoul-sandbox",
+      "defaultBranch": "main",
+      "stack": "TypeScript/Bun",
+      "port": 4540,
+      "profile": "rocksoul",
+      "pillar": "Rocksoul AI"
     }
   ]
 }

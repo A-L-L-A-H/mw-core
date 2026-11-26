@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "generatedFrom": "Z:\\repo\\workspace.json",
-  "generatedAt": "2026-11-26T22:45:00Z",
+  "generatedAt": "2026-11-26T22:25:00Z",
   "services": {
     "mw-echo": {
       "name": "mw-echo",
@@ -184,6 +184,65 @@
       "ridDependent": false,
       "endpoints": {
         "health": "GET /health"
+      }
+    },
+    "mw-rocksoul-gateway": {
+      "name": "mw-rocksoul-gateway",
+      "profile": "rocksoul",
+      "port": 4510,
+      "stack": "Go",
+      "healthEndpoint": "http://127.0.0.1:4510/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health",
+        "models": "GET /v1/models",
+        "chatCompletions": "POST /v1/chat/completions",
+        "messages": "POST /v1/messages",
+        "usage": "GET /v1/usage",
+        "localProviders": "GET /v1/local-providers"
+      }
+    },
+    "mw-rocksoul-core": {
+      "name": "mw-rocksoul-core",
+      "profile": "rocksoul",
+      "port": 4520,
+      "stack": "TypeScript/Bun",
+      "healthEndpoint": "http://127.0.0.1:4520/health",
+      "ridDependent": false,
+      "endpoints": {
+        "health": "GET /health",
+        "plansValidate": "POST /v1/plans/validate",
+        "riskEvaluate": "POST /v1/risk/evaluate",
+        "pcwVerify": "POST /v1/pcw/verify",
+        "swarmCheckOverlap": "POST /v1/swarm/check-overlap",
+        "evalsG0G6": "POST /v1/evals/g0-g6"
+      }
+    },
+    "mw-rocksoul-mcp": {
+      "name": "mw-rocksoul-mcp",
+      "profile": "rocksoul",
+      "port": 4530,
+      "stack": "TypeScript/Bun",
+      "healthEndpoint": "http://127.0.0.1:4530/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health",
+        "tools": "GET /mcp/tools",
+        "rpc": "POST /mcp/rpc"
+      }
+    },
+    "mw-rocksoul-sandbox": {
+      "name": "mw-rocksoul-sandbox",
+      "profile": "rocksoul",
+      "port": 4540,
+      "stack": "TypeScript/Bun",
+      "healthEndpoint": "http://127.0.0.1:4540/health",
+      "ridDependent": false,
+      "endpoints": {
+        "health": "GET /health",
+        "createLease": "POST /leases",
+        "releaseLease": "DELETE /leases/:id",
+        "exec": "POST /exec"
       }
     }
   }

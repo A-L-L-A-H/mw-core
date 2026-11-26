@@ -37,6 +37,11 @@ This repo provides:
 | mw-lore | epistemic | 4450 | TypeScript/Bun | Epistemic Lore |
 | mw-studio | studio | 4470 | Python | Media & AI Studio |
 | mw-pocket | mobile | — | Expo/React Native | Android-First Mobile Companion |
+| mw-rocksoul-cli | rocksoul | — | Go | Rocksoul AI |
+| mw-rocksoul-gateway | rocksoul | 4510 | Go | Rocksoul AI |
+| mw-rocksoul-core | rocksoul | 4520 | TypeScript/Bun | Rocksoul AI |
+| mw-rocksoul-mcp | rocksoul | 4530 | TypeScript/Bun | Rocksoul AI |
+| mw-rocksoul-sandbox | rocksoul | 4540 | TypeScript/Bun | Rocksoul AI |
 
 ---
 
