@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedFrom": "Z:\\repo\\workspace.json",
+  "generatedAt": "2026-11-26T22:45:00Z",
+  "services": {
+    "mw-echo": {
+      "name": "mw-echo",
+      "profile": "lite",
+      "port": 4310,
+      "stack": "Go",
+      "healthEndpoint": "http://127.0.0.1:4310/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health",
+        "stats": "GET /api/stats",
+        "projects": "GET /api/projects",
+        "tasks": "GET /api/tasks",
+        "docs": "GET /api/docs",
+        "storageBackup": "POST /api/storage/backup",
+        "observatoryTraces": "POST /v1/traces",
+        "observabilityMetrics": "POST /v1/metrics",
+        "observabilityLogs": "POST /v1/logs",
+        "observabilityServices": "GET /api/observatory/services"
+      }
+    },
+    "mw-rid": {
+      "name": "mw-rid",
+      "profile": "id",
+      "port": 4480,
+      "stack": "TypeScript/Node",
+      "healthEndpoint": "http://127.0.0.1:4480/health",
+      "ridDependent": true,
+      "endpoints": {
+        "wellKnown": "GET /.well-known/openid-configuration",
+        "jwks": "GET /jwks",
+        "auth": "GET /auth",
+        "token": "POST /token",
+        "me": "GET /me",
+        "revocation": "POST /token/revocation",
+        "health": "GET /health"
+      }
+    },
+    "mw-dock": {
+      "name": "mw-dock",
+      "profile": "saas",
+      "port": 3000,
+      "stack": "TypeScript/Bun",
+      "healthEndpoint": "http://127.0.0.1:3000/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health",
+        "docs": "GET /api/docs"
+      }
+    },
+    "mw-xv": {
+      "name": "mw-xv",
+      "profile": "saas",
+      "port": 3001,
+      "stack": "TypeScript/Bun",
+      "healthEndpoint": "http://127.0.0.1:3001/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health",
+        "board": "GET /api/board"
+      }
+    },
+    "mw-design": {
+      "name": "mw-design",
+      "profile": "saas",
+      "port": 8080,
+      "stack": "TypeScript/Bun",
+      "healthEndpoint": "http://127.0.0.1:8080/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health"
+      }
+    },
+    "mw-mylove": {
+      "name": "mw-mylove",
+      "profile": "portal",
+      "port": 4460,
+      "stack": "TypeScript/Bun",
+      "healthEndpoint": "http://127.0.0.1:4460/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health"
+      }
+    },
+    "mw-stack": {
+      "name": "mw-stack",
+      "profile": "full",
+      "port": null,
+      "stack": "Docker/Shell",
+      "healthEndpoint": null,
+      "ridDependent": true,
+      "endpoints": {
+        "verify": "bash scripts/verify-fleet.sh"
+      }
+    },
+    "mw-lab": {
+      "name": "mw-lab",
+      "profile": "ops",
+      "port": 4400,
+      "stack": "Go",
+      "healthEndpoint": "http://127.0.0.1:4400/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health"
+      }
+    },
+    "mw-mission": {
+      "name": "mw-mission",
+      "profile": "ops",
+      "port": 4410,
+      "stack": "Rust",
+      "healthEndpoint": "http://127.0.0.1:4410/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health"
+      }
+    },
+    "mw-isp": {
+      "name": "mw-isp",
+      "profile": "isp",
+      "port": 8091,
+      "stack": "Rust",
+      "healthEndpoint": "http://127.0.0.1:8091/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health",
+        "radius": "UDP 1812/1813"
+      }
+    },
+    "mw-cp": {
+      "name": "mw-cp",
+      "profile": "ops",
+      "port": 4440,
+      "stack": "Go",
+      "healthEndpoint": "http://127.0.0.1:4440/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health"
+      }
+    },
+    "mw-corpus": {
+      "name": "mw-corpus",
+      "profile": "epistemic",
+      "port": 4420,
+      "stack": "TypeScript/Bun",
+      "healthEndpoint": "http://127.0.0.1:4420/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health"
+      }
+    },
+    "mw-nexus": {
+      "name": "mw-nexus",
+      "profile": "epistemic",
+      "port": 4430,
+      "stack": "Rust",
+      "healthEndpoint": "http://127.0.0.1:4430/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health"
+      }
+    },
+    "mw-lore": {
+      "name": "mw-lore",
+      "profile": "epistemic",
+      "port": 4450,
+      "stack": "TypeScript/Bun",
+      "healthEndpoint": "http://127.0.0.1:4450/health",
+      "ridDependent": true,
+      "endpoints": {
+        "health": "GET /health"
+      }
+    },
+    "mw-studio": {
+      "name": "mw-studio",
+      "profile": "studio",
+      "port": 4470,
+      "stack": "Python",
+      "healthEndpoint": "http://127.0.0.1:4470/health",
+      "ridDependent": false,
+      "endpoints": {
+        "health": "GET /health"
+      }
+    }
+  }
+}

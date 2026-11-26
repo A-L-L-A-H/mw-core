@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedFrom": "Z:\\repo\\workspace.json",
+  "generatedAt": "2026-11-26T22:45:30Z",
+  "repositories": [
+    {
+      "name": "mw-echo",
+      "github": "A-L-L-A-H/mw-echo",
+      "defaultBranch": "main",
+      "stack": "Go",
+      "port": 4310,
+      "profile": "lite",
+      "pillar": "Sovereign Core Node"
+    },
+    {
+      "name": "mw-rid",
+      "github": "A-L-L-A-H/mw-rid",
+      "defaultBranch": "main",
+      "stack": "TypeScript/Node",
+      "port": 4480,
+      "profile": "id",
+      "pillar": "Sovereign Identity Provider (OIDC/PKCE)"
+    },
+    {
+      "name": "mw-dock",
+      "github": "A-L-L-A-H/mw-dock",
+      "defaultBranch": "main",
+      "stack": "TypeScript/Bun",
+      "port": 3000,
+      "profile": "saas",
+      "pillar": "SaaS Workspace & Dock"
+    },
+    {
+      "name": "mw-xv",
+      "github": "A-L-L-A-H/mw-xv",
+      "defaultBranch": "task-execution-dev",
+      "stack": "TypeScript/Bun",
+      "port": 3001,
+      "profile": "saas",
+      "pillar": "Board & Execution Engine"
+    },
+    {
+      "name": "mw-design",
+      "github": "A-L-L-A-H/mw-design",
+      "defaultBranch": "main",
+      "stack": "TypeScript/Bun",
+      "port": 8080,
+      "profile": "saas",
+      "pillar": "Visual Design Studio"
+    },
+    {
+      "name": "mw-mylove",
+      "github": "A-L-L-A-H/mw-mylove",
+      "defaultBranch": "main",
+      "stack": "TypeScript/Bun",
+      "port": 4460,
+      "profile": "portal",
+      "pillar": "Community & Portal"
+    },
+    {
+      "name": "mw-stack",
+      "github": "A-L-L-A-H/mw-stack",
+      "defaultBranch": "main",
+      "stack": "Docker/Shell",
+      "port": null,
+      "profile": "full",
+      "pillar": "Fleet Orchestrator"
+    },
+    {
+      "name": "mw-lab",
+      "github": "A-L-L-A-H/mw-lab",
+      "defaultBranch": "main",
+      "stack": "Go",
+      "port": 4400,
+      "profile": "ops",
+      "pillar": "Fleet Operations Lab"
+    },
+    {
+      "name": "mw-mission",
+      "github": "A-L-L-A-H/mw-mission",
+      "defaultBranch": "main",
+      "stack": "Rust",
+      "port": 4410,
+      "profile": "ops",
+      "pillar": "Mission Control"
+    },
+    {
+      "name": "mw-isp",
+      "github": "A-L-L-A-H/mw-isp",
+      "defaultBranch": "main",
+      "stack": "Rust",
+      "port": 8091,
+      "profile": "isp",
+      "pillar": "Sovereign ISP & RADIUS"
+    },
+    {
+      "name": "mw-cp",
+      "github": "A-L-L-A-H/mw-cp",
+      "defaultBranch": "main",
+      "stack": "Go",
+      "port": 4440,
+      "profile": "ops",
+      "pillar": "Control Plane & PaaS"
+    },
+    {
+      "name": "mw-corpus",
+      "github": "A-L-L-A-H/mw-corpus",
+      "defaultBranch": "main",
+      "stack": "TypeScript/Bun",
+      "port": 4420,
+      "profile": "epistemic",
+      "pillar": "Epistemic Corpus"
+    },
+    {
+      "name": "mw-nexus",
+      "github": "A-L-L-A-H/mw-nexus",
+      "defaultBranch": "main",
+      "stack": "Rust",
+      "port": 4430,
+      "profile": "epistemic",
+      "pillar": "Epistemic Nexus"
+    },
+    {
+      "name": "mw-lore",
+      "github": "A-L-L-A-H/mw-lore",
+      "defaultBranch": "main",
+      "stack": "TypeScript/Bun",
+      "port": 4450,
+      "profile": "epistemic",
+      "pillar": "Epistemic Lore"
+    },
+    {
+      "name": "mw-studio",
+      "github": "A-L-L-A-H/mw-studio",
+      "defaultBranch": "main",
+      "stack": "Python",
+      "port": 4470,
+      "profile": "studio",
+      "pillar": "Media & AI Studio"
+    },
+    {
+      "name": "mw-pocket",
+      "github": "A-L-L-A-H/mw-pocket",
+      "defaultBranch": "main",
+      "stack": "Expo/React Native (TS)",
+      "port": null,
+      "profile": "mobile",
+      "pillar": "Android-First Mobile Companion"
+    }
+  ]
+}
