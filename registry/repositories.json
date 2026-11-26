@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "generatedFrom": "Z:\\repo\\workspace.json",
-  "generatedAt": "2026-11-26T22:25:00Z",
+  "generatedAt": "2026-11-26T22:53:00Z",
   "repositories": [
     {
       "name": "mw-echo",
@@ -189,6 +189,24 @@
       "defaultBranch": "main",
       "stack": "TypeScript/Bun",
       "port": 4540,
+      "profile": "rocksoul",
+      "pillar": "Rocksoul AI"
+    },
+    {
+      "name": "mw-templates",
+      "github": "A-L-L-A-H/mw-templates",
+      "defaultBranch": "main",
+      "stack": "JSON/Node",
+      "port": null,
+      "profile": "full",
+      "pillar": "PaaS Template Catalog"
+    },
+    {
+      "name": "mw-dx",
+      "github": "A-L-L-A-H/mw-dx",
+      "defaultBranch": "main",
+      "stack": "Tauri/TypeScript",
+      "port": null,
       "profile": "rocksoul",
       "pillar": "Rocksoul AI"
     }

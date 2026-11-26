@@ -42,6 +42,8 @@ This repo provides:
 | mw-rocksoul-core | rocksoul | 4520 | TypeScript/Bun | Rocksoul AI |
 | mw-rocksoul-mcp | rocksoul | 4530 | TypeScript/Bun | Rocksoul AI |
 | mw-rocksoul-sandbox | rocksoul | 4540 | TypeScript/Bun | Rocksoul AI |
+| mw-templates | full | — | JSON/Node | PaaS Template Catalog |
+| mw-dx | rocksoul | — | Tauri/TypeScript | Rocksoul AI |
 
 ---
 
