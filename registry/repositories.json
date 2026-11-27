@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "generatedFrom": "Z:\\repo\\workspace.json",
-  "generatedAt": "2026-11-26T22:53:00Z",
+  "generatedAt": "2026-11-27T08:20:00Z",
   "repositories": [
     {
       "name": "mw-echo",
@@ -209,6 +209,15 @@
       "port": null,
       "profile": "rocksoul",
       "pillar": "Rocksoul AI"
+    },
+    {
+      "name": "mw-ww",
+      "github": "A-L-L-A-H/mw-ww",
+      "defaultBranch": "main",
+      "stack": "Go/Wails",
+      "port": null,
+      "profile": "ops",
+      "pillar": "Sovereign Disk Sweeper"
     }
   ]
 }
