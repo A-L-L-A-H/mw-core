@@ -1,0 +1,71 @@
+{
+  "maxFileLines": 400,
+  "maxTestFileLines": 800,
+  "maxLineLength": 120,
+  "maxFunctionLines": 60,
+  "maxCyclomaticComplexity": 12,
+  "maxNestingDepth": 4,
+  "maxParams": 5,
+  "maxDirSourceFiles": 30,
+  "forbidMarkers": [
+    "TODO",
+    "FIXME",
+    "HACK",
+    "XXX",
+    "@ts-ignore"
+  ],
+  "excludeDirs": [
+    ".git",
+    "node_modules",
+    "vendor",
+    "target",
+    "dist",
+    "build",
+    ".next",
+    ".next*",
+    ".turbo",
+    "coverage"
+  ],
+  "scriptsPolicy": {
+    "flatThreshold": 5,
+    "canonicalBuckets": [
+      "ci",
+      "build",
+      "release",
+      "ops",
+      "dev",
+      "lib"
+    ],
+    "allowedExtensions": [
+      ".mjs",
+      ".sh",
+      ".ps1",
+      ".py"
+    ],
+    "forbiddenExtensions": [
+      ".cjs",
+      ".bat",
+      ".cmd",
+      ".exe",
+      ".dll",
+      ".so",
+      ".dylib"
+    ],
+    "forbiddenPrefixes": [
+      "try",
+      "tmp",
+      "analyze",
+      "compare",
+      "fix_"
+    ],
+    "maxScripts": {
+      "default": 10,
+      "ops": 25,
+      "monorepo": 40
+    },
+    "repoOverrides": {
+      "mw-stack": 25,
+      "mw-xv": 40
+    }
+  }
+}

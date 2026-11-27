@@ -53,4 +53,4 @@ jobs:
 
       - name: Run core registry validation
         shell: bash
-        run: node mw-stack/scripts/validate-core-registry.mjs
+        run: node mw-stack/scripts/ci/validate-core-registry.mjs
