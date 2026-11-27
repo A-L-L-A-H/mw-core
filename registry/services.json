@@ -105,7 +105,11 @@
       "healthEndpoint": "http://127.0.0.1:4400/health",
       "ridDependent": true,
       "endpoints": {
-        "health": "GET /health"
+        "health": "GET /health",
+        "repos": "GET /api/repos",
+        "mirror": "POST /api/repos/:owner/:name/mirror",
+        "webhooks": "GET /api/webhooks",
+        "lfsBatch": "POST /:owner/:repo.git/info/lfs/objects/batch"
       }
     },
     "mw-mission": {
@@ -116,7 +120,13 @@
       "healthEndpoint": "http://127.0.0.1:4410/health",
       "ridDependent": true,
       "endpoints": {
-        "health": "GET /health"
+        "health": "GET /health",
+        "stats": "GET /api/stats",
+        "missions": "POST /api/missions",
+        "jobs": "POST /api/jobs",
+        "workersLease": "POST /api/workers/lease",
+        "crons": "POST /api/crons",
+        "dlq": "GET /api/dlq"
       }
     },
     "mw-isp": {
@@ -128,7 +138,13 @@
       "ridDependent": true,
       "endpoints": {
         "health": "GET /health",
-        "radius": "UDP 1812/1813"
+        "radius": "UDP 1812/1813",
+        "subscribers": "GET /api/subscribers",
+        "disconnect": "POST /api/sessions/disconnect",
+        "mikrotikRsc": "POST /api/isp/mikrotik/generate-rsc",
+        "vouchersBatch": "POST /api/isp/vouchers/batch",
+        "vouchersRedeem": "POST /api/isp/vouchers/redeem",
+        "liveSessions": "GET /api/isp/sessions/live"
       }
     },
     "mw-cp": {
@@ -139,7 +155,14 @@
       "healthEndpoint": "http://127.0.0.1:4440/health",
       "ridDependent": true,
       "endpoints": {
-        "health": "GET /health"
+        "health": "GET /health",
+        "deploy": "POST /api/deploy",
+        "services": "GET /api/services",
+        "templates": "GET /paas/templates",
+        "quotas": "GET /paas/quotas/",
+        "caddyAsk": "GET /paas/caddy/ask",
+        "backupPostgres": "POST /paas/backups/postgres",
+        "restoreBackup": "POST /paas/backups/restore"
       }
     },
     "mw-corpus": {
@@ -150,7 +173,12 @@
       "healthEndpoint": "http://127.0.0.1:4420/health",
       "ridDependent": true,
       "endpoints": {
-        "health": "GET /health"
+        "health": "GET /health",
+        "passages": "GET /api/passages",
+        "asmaulHusna": "GET /api/asmaul-husna",
+        "epistemicLayers": "GET /api/epistemic-layers",
+        "validateRecord": "POST /api/validate-record",
+        "mcp": "POST /api/mcp"
       }
     },
     "mw-nexus": {
@@ -161,7 +189,13 @@
       "healthEndpoint": "http://127.0.0.1:4430/health",
       "ridDependent": true,
       "endpoints": {
-        "health": "GET /health"
+        "health": "GET /health",
+        "domains": "GET /api/domains",
+        "nodes": "GET /api/nodes",
+        "correlations": "GET /api/correlations",
+        "graph": "GET /api/graph",
+        "mizanEvaluate": "POST /api/mizan/evaluate",
+        "crayonProfile": "GET /api/profiles/crayon"
       }
     },
     "mw-lore": {
@@ -172,7 +206,12 @@
       "healthEndpoint": "http://127.0.0.1:4450/health",
       "ridDependent": true,
       "endpoints": {
-        "health": "GET /health"
+        "health": "GET /health",
+        "eras": "GET /api/eras",
+        "functions": "GET /api/functions",
+        "worldRules": "GET /api/world-rules",
+        "characters": "GET /api/characters",
+        "godPromiseValidate": "POST /api/god-promise/validate"
       }
     },
     "mw-studio": {
