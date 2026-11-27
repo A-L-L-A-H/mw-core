@@ -43,9 +43,9 @@
     "mw-dock": {
       "name": "mw-dock",
       "profile": "saas",
-      "port": 3000,
+      "port": 1812,
       "stack": "TypeScript/Bun",
-      "healthEndpoint": "http://127.0.0.1:3000/health",
+      "healthEndpoint": "http://127.0.0.1:1812/health",
       "ridDependent": true,
       "endpoints": {
         "health": "GET /health",
@@ -132,9 +132,9 @@
     "mw-isp": {
       "name": "mw-isp",
       "profile": "isp",
-      "port": 3000,
+      "port": 1812,
       "stack": "Rust",
-      "healthEndpoint": "http://127.0.0.1:3000/health",
+      "healthEndpoint": "http://127.0.0.1:1812/health",
       "ridDependent": true,
       "endpoints": {
         "health": "GET /health",
