@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  commitlint:
+    name: Commitlint
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Install commitlint
+        run: npm install -g @commitlint/cli @commitlint/config-conventional
+      - name: Run commitlint
+        run: npx commitlint --from=origin/main --to=HEAD --extends @commitlint/config-conventional
+
+  verify:
+    name: Verify catalog/scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Shell syntax
+        run: |
+          find . -maxdepth 2 -name '*.sh' -not -path './node_modules/*' -print0 | xargs -0 -r bash -n
+
+      - name: Data validation
+        run: |
+          if [ -f registry/services.json ]; then node -e 'JSON.parse(require("fs").readFileSync("registry/services.json","utf8"))'; fi
+          if [ -f registry/repositories.json ]; then node -e 'JSON.parse(require("fs").readFileSync("registry/repositories.json","utf8"))'; fi
+
+  security:
+    name: Security
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
