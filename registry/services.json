@@ -100,9 +100,9 @@
     "mw-lab": {
       "name": "mw-lab",
       "profile": "ops",
-      "port": 4400,
+      "port": 8090,
       "stack": "Go",
-      "healthEndpoint": "http://127.0.0.1:4400/health",
+      "healthEndpoint": "http://127.0.0.1:8090/health",
       "ridDependent": true,
       "endpoints": {
         "health": "GET /health",
@@ -132,9 +132,9 @@
     "mw-isp": {
       "name": "mw-isp",
       "profile": "isp",
-      "port": 8091,
+      "port": 3000,
       "stack": "Rust",
-      "healthEndpoint": "http://127.0.0.1:8091/health",
+      "healthEndpoint": "http://127.0.0.1:3000/health",
       "ridDependent": true,
       "endpoints": {
         "health": "GET /health",
@@ -150,9 +150,9 @@
     "mw-cp": {
       "name": "mw-cp",
       "profile": "ops",
-      "port": 4440,
+      "port": 3003,
       "stack": "Go",
-      "healthEndpoint": "http://127.0.0.1:4440/health",
+      "healthEndpoint": "http://127.0.0.1:3003/health",
       "ridDependent": true,
       "endpoints": {
         "health": "GET /health",
