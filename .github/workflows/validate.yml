@@ -1,0 +1,56 @@
+name: D12 Core Validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-core-registry:
+    name: Validate core registry and D12 boundary
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout mw-core
+        uses: actions/checkout@v4
+        with:
+          path: mw-core
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Checkout mw-stack validator
+        uses: actions/checkout@v4
+        with:
+          repository: A-L-L-A-H/mw-stack
+          path: mw-stack
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Enforce D12 non-operational layout
+        shell: bash
+        run: |
+          set -euo pipefail
+          forbidden='^(scripts|docker|compose|deploy|infra|bin|src|apps|packages|dist|build|node_modules)$'
+          violations=0
+          while IFS= read -r entry; do
+            if [[ "$entry" =~ $forbidden ]]; then
+              echo "::error::D12 violation: operational directory '$entry' exists in mw-core"
+              violations=1
+            fi
+          done < <(find mw-core -mindepth 1 -maxdepth 1 \( -type d -o -type l \) -printf '%f\n')
+          if [[ "$violations" -ne 0 ]]; then
+            exit 1
+          fi
+          echo "D12 check passed: no operational directories in mw-core"
+
+      - name: Run core registry validation
+        shell: bash
+        run: node mw-stack/scripts/validate-core-registry.mjs
