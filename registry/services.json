@@ -43,9 +43,9 @@
     "mw-dock": {
       "name": "mw-dock",
       "profile": "saas",
-      "port": 1812,
+      "port": 1811,
       "stack": "TypeScript/Bun",
-      "healthEndpoint": "http://127.0.0.1:1812/health",
+      "healthEndpoint": "http://127.0.0.1:1811/health",
       "ridDependent": true,
       "endpoints": {
         "health": "GET /health",
